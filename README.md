@@ -1,5 +1,5 @@
 # DOTENV - C
-A dotenv implementation for C programming language
+A dotenv implementation for the C programming language
 
 ## Getting started
 ### Load .env file
