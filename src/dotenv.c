@@ -107,11 +107,8 @@ int load_dotenv()
 		if (ferror(file))
 			return -1;
 		fclose(file);
+        return 0;
 	}
-	else
-	{
-		printf("No file provided");
-	}
-	return 0;
+	return -1;
 }
 
