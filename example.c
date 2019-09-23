@@ -1,14 +1,21 @@
 #include "src/dotenv.h"
 
+void println(char * msg)
+{
+	printf("%s\n", msg);
+}
+
 int main()
 {
     if(load_dotenv() < 0)
 	{	
+		println("No .env file could be found");
+		println("Exiting...");
 		return 1;
 	}
 
-    printf("%s\n", get_env("SERVER_PORT"));
-    printf("%s\n", get_env("SERVER_URL"));
+    println(get_env("SERVER_PORT"));
+    println(get_env("SERVER_URL"));
 
 	return 0;
 }
